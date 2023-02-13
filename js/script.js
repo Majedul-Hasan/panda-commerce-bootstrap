@@ -1,21 +1,25 @@
 const allH2 = document.querySelectorAll('h2')
 // console.log(allH2);
-allH2.forEach(elem => {
-    elem.style.color = 'lightblue'
-    
-});
+// allH2.forEach(function(h2){
+//     h2.style.color = 'lightblue'
+// });
+// for (const h2 of allH2) {
+//     h2.style.color = 'lightblue'    
+// }
 
-    
-    document.querySelector('#backpack').style.backgroundColor = 'tomato';
+for (let i = 0; i < allH2.length; i++) {
+    allH2[i].style.color = 'lightblue'
+}
+
+    document.getElementById('backpack').style.backgroundColor = 'tomato';
+    // document.querySelector('#backpack').style.backgroundColor = 'tomato';
     document.querySelector('#backpack').style.paddingBottom = '30px';
 
    const cards = document.getElementsByClassName('card')
+   console.log(cards);
 
 for (const card of cards) {
-    card.style.borderRadius = '30px';
-    
-
-    
+    card.style.borderRadius = '30px';     
 }
 
  document.getElementsByTagName('button')[1].addEventListener('click', function () {
@@ -28,7 +32,6 @@ for (const card of cards) {
          event.target.parentNode.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode.parentNode);
     } else{
         // event.target.parentNode.removeChild(event.target)
-
     }
 
  })
@@ -38,7 +41,7 @@ for (const card of cards) {
     
  })
 document.getElementById('exampleInputEmail1').addEventListener('keyup', function (event) {
-   console.log(event.target.value);
+//    console.log(event.target.value);
    if(event.target.value === 'email'){
     document.getElementById('submitBtn').removeAttribute('disabled')
      } else{
@@ -47,6 +50,7 @@ document.getElementById('exampleInputEmail1').addEventListener('keyup', function
     })
 
     const imgs = shocase.getElementsByTagName("img");
+    console.log(imgs);
    
     for (const img of imgs) {    
         const originalSrc = img.getAttribute('src');   
